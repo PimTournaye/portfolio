@@ -1,12 +1,7 @@
-const config = {
-	mode: 'jit',
-	content: ['./src/**/*.{html,js,svelte,ts}'],
-
-	theme: {
-		extend: {}
-	},
-
-	plugins: [require('daisyui')]
+module.exports = {
+  content: [
+  './src/routes/**/*.{svelte,js,ts}',
+  './src/lib/**/*.{svelte,js,ts}',
+],
+  plugins: [require('daisyui')],
 };
-
-module.exports = config;

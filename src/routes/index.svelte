@@ -1,5 +1,9 @@
-<script context="module" lang="ts">
+<script context="module">
 	export const prerender = true;
+</script>
+
+<script>
+	import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
@@ -15,15 +19,18 @@
 			</picture>
 		</div>
 
-		to my new<br />SvelteKit app
+		to your new<br />SvelteKit app
 	</h1>
+
+	<h1 class="text-3xl font-bold underline">
+		Hello world!
+	  </h1>
 
 	<h2>
 		try editing <strong>src/routes/index.svelte</strong>
-		<a href="/about">About page is here</a>
 	</h2>
 
-	<h3>This is a big test</h3>
+	<Counter />
 </section>
 
 <style>
