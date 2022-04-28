@@ -11,17 +11,18 @@
 		);
 
 		const query = gql`
-        query postPageQuery($slug: String!) {
-          projects(where: { slug: $slug }) {
-            name
-            image {
-                id
-            }
-            description
-            tags
-            short
-            }
-          }
+        query Project($slug: String!) {
+  project(where: {slug: $slug}) {
+    name
+    short
+    description
+    tags
+    image {
+      url
+    }
+  }
+}
+
         `
       ;
 
@@ -51,4 +52,3 @@
 <p>{project.description}</p>
 <p>{project.tags}</p>
 <img src={project.image} alt="Picture of {project.name}" />
-{@html project.content.html}

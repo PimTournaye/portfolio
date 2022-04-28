@@ -2,33 +2,31 @@ import { client } from "$lib/graphql-client";
 import { gql } from "graphql-request";
 
 export const get = async () => {
-    try {
-        const query = gql`
+  try {
+    const query = gql`
         query Projects {
             projects {
               slug
               name
               short
-              id
               tags
               image {
-                url
-                size
+                url(transformation:{image:{resize:{fit:clip, width:500, height:400}}})
               }
             }
           }
         `;
-        
-        const { posts } = await client.request(query);
 
-        return {
-            status: 200,
-            body: { posts }
-        }
-    } catch (error) {
-        return {
-            status: 500,
-            body: { error }
-        }
+    const { projects } = await client.request(query);
+
+    return {
+      status: 200,
+      body: {projects}
     }
+  } catch (error) {
+    return {
+      status: 500,
+      body: { error }
+    }
+  }
 }
