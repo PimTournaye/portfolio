@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "env-cmd svelte-kit dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
@@ -33,6 +33,7 @@
     "autoprefixer": ">=10.0.2 <11.0.0",
     "cookie": "^0.4.1",
     "daisyui": "^2.6.2",
+    "env-cmd": "^10.1.0",
     "p5-svelte": "^3.1.2",
     "postcss": ">=8.3.3 <9.0.0"
   }

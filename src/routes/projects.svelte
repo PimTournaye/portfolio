@@ -1,5 +1,6 @@
 <script context="module">
 	import { browser } from '$app/env';
+import tagColor from '$lib/tags-colors';
 	export const router = browser;
 
 	import { GraphQLClient, gql } from 'graphql-request';
@@ -46,22 +47,21 @@
 <section id="projects-container mt-5 space-x-2">
 	{#each projects as {name, id, image, short, tags}}
 		<div class="card w-96 bg-base-100 shadow-xl card-normal">
-			<figure><img src={image.url} alt="Picture of {name}" /></figure>
 			<p class="">
 				<!-- RECHECK THE SLUG HERE -->
-				<a href="/projects/{id}" class="card-title hover:bg-red-700">
+				<a href="/projects/{id}" class="card-title">
 					{name}
 				</a>
 			</p>
+			<figure><img src={image.url} alt="Picture of {name}" /></figure>
 			<p>{short}</p>
 			{#if tags}
 			<div class="mt-5 space-x-2">
 				{#each tags as tag}
-				<span class="badge badge-primary">{tag}</span>
+				<span class="text=[{tagColor(tag)}]">●</span><span class="badge badge-primary">{tag}</span>
 				{/each}
 			</div>
 			{/if}
-
 		</div>
 	{/each}
 </section>
