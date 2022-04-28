@@ -15,7 +15,6 @@
 <script>
 	// @ts-nocheck
 	export let projects;
-	console.log(projects);
 </script>
 
 <svelte:head>
@@ -38,7 +37,7 @@
 				</a>
 			</p>
 			<figure class='px-10 pt-10'>
-				<img src={image.url} alt="Picture of {name}" />\
+				<img src={image[0].url} alt="Picture of {name}" />
 			</figure>
 			<p>{short}</p>
 			{#if tags}
