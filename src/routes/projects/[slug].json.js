@@ -11,6 +11,8 @@ export const get = async (req) => {
               short
               description
               tags
+              demo
+              sourceCode
               image {
                 url
               }
