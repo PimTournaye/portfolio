@@ -1,5 +1,14 @@
-@import '@fontsource/fira-mono';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+:root {
+    --color-background: #1F1F1F;
+    --color-primary: #FFC107;
+    --color-text: #FDFEFF;
+    font-family: 'Nunito Sans', sans-serif
+}
