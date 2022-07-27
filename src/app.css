@@ -4,11 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+	.sidebar-item {
+		@apply flex justify-center items-center h-24 w-24 mt-4 mb-4 mx-auto shadow-lg;
+	}
+	.sidebar-tooltip {
+		@apply text-center text-white text-xs font-bold;
+	}
+}
 
 :root {
-    --color-background: #1F1F1F;
-    --color-primary: #FFC107;
-    --color-text: #FDFEFF;
-    font-family: 'Nunito Sans', sans-serif
+	--color-background: #1f1f1f;
+	--color-primary: #ffc107;
+	--color-text: #fdfeff;
+	font-family: 'Nunito Sans', sans-serif;
 }

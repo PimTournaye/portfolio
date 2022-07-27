@@ -3,13 +3,13 @@
 	import tagColor from '$lib/tags-colors';
 	export const router = browser;
 
-	export const load = async ({fetch}) => {
+	export const load = async ({ fetch }) => {
 		const res = await fetch('/projects.json');
 		if (res.ok) {
 			const { projects } = await res.json();
-			return {props: { projects }};
+			return { props: { projects } };
 		}
-	}
+	};
 </script>
 
 <script>
@@ -26,9 +26,8 @@
 	<div>Here are some noteworthy projects I've done in the past.</div>
 </section>
 
-<section id="projects-container mt-5 space-x-2">
+<section class="flex md:flex-row sm:flex-col justify-between">
 	{#each projects as { name, slug, short, image, tags }}
-		{@debug }
 		<div class="card w-96 bg-base-100 shadow-xl card-normal">
 			<p class="">
 				<!-- RECHECK THE SLUG HERE -->
@@ -36,7 +35,7 @@
 					{name}
 				</a>
 			</p>
-			<figure class='px-10 pt-10'>
+			<figure class="px-10 pt-10">
 				<img src={image[0].url} alt="Picture of {name}" />
 			</figure>
 			<p>{short}</p>

@@ -1,42 +1,26 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
+	import Sidebar from '$lib/header/Sidebar.svelte';
 	import '../app.css';
-	import Interests from '$lib/Interests.svelte';
+
+	let dark = true;
 </script>
 
-<Header />
-
-<main>
-	<slot />
-</main>
+<div class:dark>
+	<Sidebar bind:dark />
+	<main class="flex justify-center">
+		<slot />
+	</main>
+</div>
 
 <footer>
-	<p>Some of my interests include <span>{Interests}</span></p>
+	<h1>Contact:</h1>
+	Socials
+	<ul>
+		<li>
+			<a href="https://www.linkedin.com/in/pim-tournaye-a65b151a2/">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://www.instagram.com/wafflemancer">Instagram</a>
+		</li>
+	</ul>
 </footer>
-
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
-</style>

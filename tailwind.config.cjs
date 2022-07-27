@@ -1,28 +1,17 @@
-
-
 module.exports = {
-  content: [
-  './src/routes/**/*.{svelte,js,ts}',
-  './src/lib/**/*.{svelte,js,ts}',
-],
-  plugins: [require('daisyui')],
-  /* theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'white': '#ffffff',
-      'project-tags': {
-        100: '#cffafe',
-        200: '#a5f3fc',
-        300: '#67e8f9',
-        400: '#22d3ee',
-        500: '#06b6d4',
-        600: '#0891b2',
-        700: '#0e7490',
-        800: '#155e75',
-        900: '#164e63',
-      },
-      // ...
-    },
-  }, */
+	content: ['./src/routes/**/*.{svelte,js,ts}', './src/lib/**/*.{svelte,js,ts}'],
+	plugins: [require('daisyui')],
+	darkMode: 'class',
+	theme: {
+		extend: {
+			colors: {
+				'bau-red': '#BE1E2D',
+				'bau-blue': '#21409A',
+				'bau-yellow': '#FFDE17',
+				'bright-bau-red': '#e83c28',
+				'bright-bau-blue': '#091c44',
+				'bright-bau-yellow': '#f4b800'
+			}
+		}
+	}
 };
