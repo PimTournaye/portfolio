@@ -23,11 +23,11 @@
 	<h1>About me, Pim</h1>
 	<p id="part-one" class="text-roman white-text">
 		You know how some things in life just really rub off on you? Jazz was one of those things for
-		me. The spirit of the music, of improvisation and a continual <span class="text-bright-bau-yellow dark:text-bau-yellow"
-			>conversation</span
+		me. The spirit of the music, of improvisation and a continual <span
+			class="text-bright-bau-yellow dark:text-bau-yellow">conversation</span
 		>
-		is something I really internalized throughout my studies. I believe that conversation
-		perpetuates in everything. Design, coding,
+		is something I really internalized throughout my studies. I believe that conversation perpetuates
+		in everything. Design, coding,
 		<span class="yellow-text">conceptualization and ideation</span>, walking, the way you open your
 		window to look outside. You name it, there's continuous movement, tension and release. One thing
 		that immensely enhances that social aspect is interactivity, and it continues to facinate me

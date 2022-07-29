@@ -24,4 +24,3 @@
 		<p>Built with &hearts and Svelte</p>
 	</footer>
 </div>
-
