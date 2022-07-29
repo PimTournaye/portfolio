@@ -14,8 +14,5 @@
 }
 
 :root {
-	--color-background: #1f1f1f;
-	--color-primary: #ffc107;
-	--color-text: #fdfeff;
-	font-family: 'Nunito Sans', sans-serif;
+	@apply bg-[#f7f7f7] dark:bg-black text-[#222222] dark:text-white;
 }

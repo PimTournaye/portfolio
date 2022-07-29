@@ -1,7 +1,7 @@
 import { client } from '$lib/graphql-client';
 import { gql } from 'graphql-request';
 
-export const get = async (req) => {
+export const GET = async (req) => {
 	const slug = req.params.slug;
 	try {
 		const query = gql`

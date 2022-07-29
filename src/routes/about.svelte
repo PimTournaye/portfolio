@@ -23,7 +23,7 @@
 	<h1>About me, Pim</h1>
 	<p id="part-one" class="text-roman white-text">
 		You know how some things in life just really rub off on you? Jazz was one of those things for
-		me. The spirit of the music, of improvisation and a continual <span class="blue-text"
+		me. The spirit of the music, of improvisation and a continual <span class="text-bright-bau-yellow dark:text-bau-yellow"
 			>conversation</span
 		>
 		is something I really internalized throughout my studies. I believe that conversation
