@@ -11,8 +11,11 @@ module.exports = {
 				'bright-bau-red': '#e83c28',
 				'bright-bau-blue': '#091c44',
 				'bright-bau-yellow': '#f4b800',
-				timberwolf: '#DBD4D3'
+				'timberwolf': '#DBD4D3'
 			}
+		},
+		borderRadius: {
+			"full": "100px"
 		}
 	}
 };
