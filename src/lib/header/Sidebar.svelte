@@ -1,7 +1,6 @@
 <script>
 	import SidebarToggle from '$lib/header/SidebarToggle.svelte';
-	import { page } from '$app/stores';
-import SidebarItem from './SidebarItem.svelte';
+	import SidebarItem from './SidebarItem.svelte';
 	export let dark;
 
 	const moon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -20,10 +19,6 @@ import SidebarItem from './SidebarItem.svelte';
 <svelte:window bind:outerWidth />
 
 <header class="flex">
-	
-	{#if outerWidth < 850}
-		<SidebarToggle />
-	{/if}
 
 	<nav
 		class="fixed top-0 left-0 h-screen w-36 m-0 flex flex-col justify-between shadow-lg dark:bg-slate-900 bg-timberwolf"

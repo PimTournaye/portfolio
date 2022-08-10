@@ -4,6 +4,11 @@
     export let text;
     export let route;
     export let color;
+
+    const colors = {
+        dark: "dark:bg-bau-" + color,
+        light: "bg-bright-bau-" + color
+    }
 </script>
 
 
@@ -11,8 +16,8 @@
     <a sveltekit:prefetch href={route}
         class="sidebar-item rounded-full
     hover:rounded-xl transition-all duration-200 ease-linear
-    dark:bg-bau-{color} bg-bright-bau-{color}"
-    >
+    {colors.dark} {colors.light}
+    ">
     <span class="sidebar-tooltip">{text}</span>
-</a>
+    </a>
 </li>

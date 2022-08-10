@@ -1,9 +1,9 @@
 import { client } from '$lib/graphql-client';
 import { gql } from 'graphql-request';
 
-export const GET = async () => {
+export const load = async () => {
 	try {
-		const query = gql`
+		const QUERY = gql`
 			query Projects {
 				projects {
 					slug
@@ -17,7 +17,7 @@ export const GET = async () => {
 			}
 		`;
 
-		const { projects } = await client.request(query);
+		const { projects } = await client.request(QUERY);
 
 		return {
 			status: 200,
@@ -26,7 +26,7 @@ export const GET = async () => {
 	} catch (error) {
 		return {
 			status: 500,
-			body: { error }
+			body: { error: error.message }
 		};
 	}
 };
