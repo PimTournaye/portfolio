@@ -5,9 +5,9 @@
 	let dark = true;
 </script>
 
-<div class:dark>
-	<Sidebar bind:dark />
-	<main class="flex justify-center mt-8">
+<div class:dark class="flex">
+	<Sidebar bind:dark class="flex"/>
+	<main class="flex justify-center mt-8 md: ml-10">
 		<slot />
 	</main>
 	<footer>
