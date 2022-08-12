@@ -18,10 +18,10 @@
     </figure>
     <p>{short}</p>
     {#if tags}
-        <div class="mt-5 space-x-2 flex justify-start">
+        <div class="mt-5 mb-5 space-x-2 flex justify-start">
             {#each tags as tag}
-                <div class="badge badge-outline">
-                    <span class="text=[]">●</span><span>{tag}</span>
+                <div class="badge badge-outline flex flex-wrap">
+                    <span class="mr-2">●</span><span>{tag}</span>
                 </div>
             {/each}
         </div>
