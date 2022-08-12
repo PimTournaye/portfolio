@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
     import { page } from '$app/stores';
 
-    export let text;
-    export let route;
-    export let color;
+    export let text: string;
+    export let route: string;
+    export let color: string;
 
     const colors = {
         dark: "dark:bg-bau-" + color,
@@ -16,7 +16,7 @@
     <a sveltekit:prefetch href={route}
         class="sidebar-item rounded-full
     hover:rounded-xl transition-all duration-200 ease-linear
-    {colors.dark} {colors.light}
+    {$$props.class}
     ">
     <span class="sidebar-tooltip">{text}</span>
     </a>
