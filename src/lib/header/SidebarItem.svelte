@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
     import { page } from '$app/stores';
 
-    export let text;
-    export let route;
-    export let color;
+    export let text: string;
+    export let route: string;
 </script>
 
 
@@ -11,8 +10,9 @@
     <a sveltekit:prefetch href={route}
         class="sidebar-item rounded-full
     hover:rounded-xl transition-all duration-200 ease-linear
-    dark:bg-bau-{color} bg-bright-bau-{color}"
-    >
-    <span class="sidebar-tooltip">{text}</span>
-</a>
+    group
+    {$$props.class}
+    ">
+    <span class="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </a>
 </li>

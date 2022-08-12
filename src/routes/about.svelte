@@ -15,6 +15,7 @@
 	export const prerender = true;
 </script>
 
+
 <svelte:head>
 	<title>About</title>
 </svelte:head>
@@ -36,12 +37,15 @@
 		development and experimentation. I like involving people and building experiences that are
 		unforgettable.
 	</p>
-</div>
 
-<style>
-	.content {
-		width: 100%;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
-	}
-</style>
+	<h1>Contact:</h1>
+		Socials
+		<ul>
+			<li>
+				<a href="https://www.linkedin.com/in/pim-tournaye-a65b151a2/">LinkedIn</a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/wafflemancer">Instagram</a>
+			</li>
+		</ul>
+</div>

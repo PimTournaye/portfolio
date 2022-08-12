@@ -1,20 +1,16 @@
-<script context="module">
+<script context="module" lang="ts">
+	import Projects from '$lib/components/Projects.svelte';
+
 	import { browser } from '$app/env';
-	import tagColor from '$lib/tags-colors';
+	import { GQL_Projects } from '$houdini'
+	import type { LoadEvent } from '@sveltejs/kit';
+
 	export const router = browser;
 
-	export const load = async ({ fetch }) => {
-		const res = await fetch('/projects.json');
-		if (res.ok) {
-			const { projects } = await res.json();
-			return { props: { projects } };
-		}
-	};
-</script>
-
-<script>
-	// @ts-nocheck
-	export let projects;
+	export const load = async (event: LoadEvent) => {
+		await GQL_Projects.fetch({ event });
+		return {};
+	}
 </script>
 
 <svelte:head>
@@ -27,27 +23,5 @@
 </section>
 
 <section class="flex md:flex-row sm:flex-col justify-between">
-	{#each projects as { name, slug, short, image, tags }}
-		<div class="card w-96 bg-base-100 shadow-xl card-normal">
-			<p class="">
-				<!-- RECHECK THE SLUG HERE -->
-				<a href="/projects/{slug}" class="card-title">
-					{name}
-				</a>
-			</p>
-			<figure class="px-10 pt-10">
-				<img src={image[0].url} alt="Picture of {name}" />
-			</figure>
-			<p>{short}</p>
-			{#if tags}
-				<div class="mt-5 space-x-2 flex justify-start">
-					{#each tags as tag}
-						<div class="badge badge-outline">
-							<span class="text=[{tagColor(tag)}]">●</span><span>{tag}</span>
-						</div>
-					{/each}
-				</div>
-			{/if}
-		</div>
-	{/each}
+	<Projects />
 </section>
