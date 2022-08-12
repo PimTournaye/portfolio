@@ -12,7 +12,7 @@
 {#if $GQL_Projects.isFetching}
 	Loading...
 {:else}
-	{#each projects as { name, slug, short, image, tags }}
-		<ProjectCard name={name} slug={slug} short={short} image={image[0].url} tags={tags} />
+	{#each projects as { name, slug, short, image, year, tags }}
+		<ProjectCard name={name} slug={slug} short={short} images={image} year={year} tags={tags} />
 	{/each}
 {/if}
