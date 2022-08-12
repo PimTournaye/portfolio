@@ -12,7 +12,8 @@
 
 <div class:dark class="flex flex-row">
 	<Sidebar bind:dark />
-	<main class="flex justify-center mt-8 md: ml-10">
+	<main class="flex justify-center mt-8 md: ml-10 h-full w-full 
+    overflow-hidden">
 		<slot />
 	</main>
 </div>
