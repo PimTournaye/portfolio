@@ -2319,7 +2319,7 @@ type Project implements Node {
     locales: [Locale!]
   ): User
   demo: String
-  description: String!
+  description: RichText
 
   """Get the document in other stages"""
   documentInStages(
@@ -2429,6 +2429,7 @@ type Project implements Node {
     """
     locales: [Locale!]
   ): User
+  year: Int
 }
 
 input ProjectConnectInput {
@@ -2455,7 +2456,7 @@ type ProjectConnection {
 input ProjectCreateInput {
   createdAt: DateTime
   demo: String
-  description: String!
+  description: RichTextAST
   image: AssetCreateManyInlineInput!
   name: String!
   short: String!
@@ -2463,6 +2464,7 @@ input ProjectCreateInput {
   sourceCode: String
   tags: [String!]
   updatedAt: DateTime
+  year: Int
 }
 
 input ProjectCreateManyInlineInput {
@@ -2554,34 +2556,6 @@ input ProjectManyWhereInput {
 
   """All values starting with the given string."""
   demo_starts_with: String
-  description: String
-
-  """All values containing the given string."""
-  description_contains: String
-
-  """All values ending with the given string."""
-  description_ends_with: String
-
-  """All values that are contained in given list."""
-  description_in: [String]
-
-  """All values that are not equal to given value."""
-  description_not: String
-
-  """All values not containing the given string."""
-  description_not_contains: String
-
-  """All values not ending with the given string"""
-  description_not_ends_with: String
-
-  """All values that are not contained in given list."""
-  description_not_in: [String]
-
-  """All values not starting with the given string."""
-  description_not_starts_with: String
-
-  """All values starting with the given string."""
-  description_starts_with: String
   id: ID
 
   """All values containing the given string."""
@@ -2797,6 +2771,28 @@ input ProjectManyWhereInput {
   """All values that are not contained in given list."""
   updatedAt_not_in: [DateTime]
   updatedBy: UserWhereInput
+  year: Int
+
+  """All values greater than the given value."""
+  year_gt: Int
+
+  """All values greater than or equal the given value."""
+  year_gte: Int
+
+  """All values that are contained in given list."""
+  year_in: [Int]
+
+  """All values less than the given value."""
+  year_lt: Int
+
+  """All values less than or equal the given value."""
+  year_lte: Int
+
+  """All values that are not equal to given value."""
+  year_not: Int
+
+  """All values that are not contained in given list."""
+  year_not_in: [Int]
 }
 
 enum ProjectOrderByInput {
@@ -2804,8 +2800,6 @@ enum ProjectOrderByInput {
   createdAt_DESC
   demo_ASC
   demo_DESC
-  description_ASC
-  description_DESC
   id_ASC
   id_DESC
   name_ASC
@@ -2822,17 +2816,20 @@ enum ProjectOrderByInput {
   tags_DESC
   updatedAt_ASC
   updatedAt_DESC
+  year_ASC
+  year_DESC
 }
 
 input ProjectUpdateInput {
   demo: String
-  description: String
+  description: RichTextAST
   image: AssetUpdateManyInlineInput
   name: String
   short: String
   slug: String
   sourceCode: String
   tags: [String!]
+  year: Int
 }
 
 input ProjectUpdateManyInlineInput {
@@ -2862,10 +2859,11 @@ input ProjectUpdateManyInlineInput {
 
 input ProjectUpdateManyInput {
   demo: String
-  description: String
+  description: RichTextAST
   short: String
   sourceCode: String
   tags: [String!]
+  year: Int
 }
 
 input ProjectUpdateManyWithNestedWhereInput {
@@ -2984,34 +2982,6 @@ input ProjectWhereInput {
 
   """All values starting with the given string."""
   demo_starts_with: String
-  description: String
-
-  """All values containing the given string."""
-  description_contains: String
-
-  """All values ending with the given string."""
-  description_ends_with: String
-
-  """All values that are contained in given list."""
-  description_in: [String]
-
-  """All values that are not equal to given value."""
-  description_not: String
-
-  """All values not containing the given string."""
-  description_not_contains: String
-
-  """All values not ending with the given string"""
-  description_not_ends_with: String
-
-  """All values that are not contained in given list."""
-  description_not_in: [String]
-
-  """All values not starting with the given string."""
-  description_not_starts_with: String
-
-  """All values starting with the given string."""
-  description_starts_with: String
   id: ID
 
   """All values containing the given string."""
@@ -3227,6 +3197,28 @@ input ProjectWhereInput {
   """All values that are not contained in given list."""
   updatedAt_not_in: [DateTime]
   updatedBy: UserWhereInput
+  year: Int
+
+  """All values greater than the given value."""
+  year_gt: Int
+
+  """All values greater than or equal the given value."""
+  year_gte: Int
+
+  """All values that are contained in given list."""
+  year_in: [Int]
+
+  """All values less than the given value."""
+  year_lt: Int
+
+  """All values less than or equal the given value."""
+  year_lte: Int
+
+  """All values that are not equal to given value."""
+  year_not: Int
+
+  """All values that are not contained in given list."""
+  year_not_in: [Int]
 }
 
 """References Project record uniquely"""
