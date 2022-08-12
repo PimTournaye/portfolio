@@ -37,15 +37,4 @@
 		development and experimentation. I like involving people and building experiences that are
 		unforgettable.
 	</p>
-
-	<h1>Contact:</h1>
-		Socials
-		<ul>
-			<li>
-				<a href="https://www.linkedin.com/in/pim-tournaye-a65b151a2/">LinkedIn</a>
-			</li>
-			<li>
-				<a href="https://www.instagram.com/wafflemancer">Instagram</a>
-			</li>
-		</ul>
 </div>
