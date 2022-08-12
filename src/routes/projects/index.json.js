@@ -1,32 +1,19 @@
-import { client } from '$lib/graphql-client';
-import { gql } from 'graphql-request';
+import { GQL_Projects } from '$houdini'
 
-export const load = async () => {
-	try {
-		const QUERY = gql`
-			query Projects {
-				projects {
-					slug
-					name
-					short
-					tags
-					image {
-						url(transformation: { image: { resize: { fit: clip, width: 500, height: 400 } } })
-					}
-				}
-			}
-		`;
+export const GET = async () => {
+  try {
 
-		const { projects } = await client.request(QUERY);
+	const { data } =  await GQL_Projects.fetch();
+	const projects = data.projects;
 
-		return {
-			status: 200,
-			body: { projects }
-		};
-	} catch (error) {
-		return {
-			status: 500,
-			body: { error: error.message }
-		};
+	return {
+		status: 200,
+		body: { projects }
 	}
-};
+  } catch (error) {
+	return {
+		status: 500,
+		body: { error }
+	}
+  }
+}

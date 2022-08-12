@@ -7,15 +7,26 @@ const config = {
 	plugins: [
 		sveltekit(),
 		watchAndRun([
-		  {
-			name: 'gen',
-			watchKind: ['add', 'change', 'unlink'],
-			watch: path.resolve('src/**/*.(gql|svelte)'),
-			run: 'npm run gen',
-			delay: 300
-		  }
+			{
+				name: 'Houdini',
+				watch: path.resolve('src/**/*.(gql|graphql|svelte)'),
+				run: 'npm run gen',
+				delay: 100,
+				watchKind: ['ready', 'add', 'change', 'unlink'],
+			},
+			{
+				name: 'Houdini',
+				watch: path.resolve('houdini.config.js'),
+				run: 'npm run gen',
+				delay: 100,
+			},
 		])
-	  ],
+	],
+	server: {
+		fs: {
+			allow: ['.'],
+		},
+	},
 };
 
 export default config;
