@@ -16,7 +16,6 @@
 
 <svelte:window bind:outerWidth />
 
-<header class="flex">
 	<nav
 		class="fixed top-0 left-0 h-screen w-36 m-0 flex flex-col justify-between shadow-lg dark:bg-slate-900 bg-timberwolf"
 	>
@@ -41,4 +40,3 @@
 			{/if}
 		</button>
 	</nav>
-</header>
