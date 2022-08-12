@@ -1,9 +1,9 @@
 <script lang="ts">
-    let name: string;
-    let slug: string;
-    let short: string;
-    let image: string;
-    let tags: string[];
+    export let name: string | null;
+    export let slug: string | null;
+    export let short: string | null;
+    export let image: string | null;
+    export let tags: string[] | null;
 </script>
 
 <div class="card w-96 shadow-xl card-normal">
