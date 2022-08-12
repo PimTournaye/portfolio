@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	import { GQL_Projects } from '$houdini';
-    import Projects from '$lib/components/Projects.svelte';
+	import Projects from '$lib/components/Project/Projects.svelte';
 	import type { LoadEvent } from '@sveltejs/kit';
 
 	export async function load(event: LoadEvent) {

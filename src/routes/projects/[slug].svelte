@@ -1,22 +1,33 @@
-<script lang="ts">
+<script lang="ts" context="module">
+	import { browser } from '$app/env';
 	import { GQL_Project } from '$houdini';
 	import type { LoadEvent } from '@sveltejs/kit';
-
+	import Project from '$lib/components/Project/Project.svelte';
+	
 	export async function load(event: LoadEvent) {
-		const { slug } = event.params;
-		await GQL_Project.fetch({ event, variables: { slug } });
-		return {};
-	}
+		const variables = {	slug: event.params.slug};
+		await GQL_Project.fetch({ event, variables });
+		return { props: { variables } }
+	};
+</script>
 
-	const { name, description} = $GQL_Project.data?.project || {};
+<script lang="ts">
+	export let variables: any;
+
+	$: browser && GQL_Project.fetch({ variables });
+
+	const { name, description } = $GQL_Project.data?.project || {};
 	const tags = $GQL_Project.data?.project?.tags;
 	const image = $GQL_Project.data?.project?.image[0].url;
 	const demo = $GQL_Project.data?.project?.demo;
 	const source = $GQL_Project.data?.project?.sourceCode;
+
+	console.log(description);
+	
 </script>
 
 <svelte:head>
-	<title>{name}</title>
+    <title>{name}</title>
 </svelte:head>
 
 <section>
@@ -24,12 +35,12 @@
 	<figure class="px-10 pt-10">
 		<img src={image} alt="Picture of {name}" />
 	</figure>
-	<!-- {#each tags as tag}
+	{#each tags as tag}
 		<div class="badge badge-outline">
 			<span>{tag}</span>
 		</div>
-	{/each} -->
-	<p>{description}</p>
+	{/each}
+	<p>{@html description.html}</p>
 
 	{#if demo}
 		<div class="mt-5">
