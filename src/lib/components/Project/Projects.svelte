@@ -2,7 +2,7 @@
 	import { browser } from '$app/env';
 	import { GQL_Projects } from '$houdini';
 
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
 
 	$: browser && GQL_Projects.fetch();
 
