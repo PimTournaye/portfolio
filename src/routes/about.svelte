@@ -1,6 +1,7 @@
 <script context="module">
 	// @ts-ignore
 	import { browser, dev } from '$app/env';
+	import SkillIcon from '$lib/components/SkillIcon.svelte';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -20,7 +21,7 @@
 	<title>About</title>
 </svelte:head>
 
-<div class="content">
+<section>
 	<h1>About me, Pim</h1>
 	<p id="part-one" class="text-roman white-text">
 		You know how some things in life just really rub off on you? Jazz was one of those things for
@@ -37,4 +38,97 @@
 		development and experimentation. I like involving people and building experiences that are
 		unforgettable.
 	</p>
-</div>
+</section>
+
+<section>
+	
+	<h2>Skills</h2>
+	<p>Here's what I can do and what I'm learning in the fields I'm interested in.</p>
+
+	<h3>Coding</h3>
+	<div class="flex">
+		<SkillIcon name="JavaScript" level={85}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+		<SkillIcon name="TypeScript" level={55}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+		<SkillIcon name="Python" level={35}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+		<SkillIcon name="C" level={35}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+		<SkillIcon name="Rust" level={5}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+		
+		<SkillIcon name="Haskell" level={5}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+	</div>
+	
+	<h3>Web</h3>
+	<div class="flex">
+		
+		<SkillIcon name="Node.js" level={70}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+		<SkillIcon name="D3.js" level={30}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+
+		<SkillIcon name="HTML" level={60}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+
+		<SkillIcon name="CSS" level={40}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+
+		<SkillIcon name="Svelte" level={30}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+
+		<SkillIcon name="React" level={20}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+
+		<SkillIcon name="p5.js" level={60}
+		svg="https://blindedcyclops.neocities.org/p5js-icons/p5-sq-reverse-filled.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+
+		<SkillIcon name="MongoDB" level={35}
+		svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg"
+		text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+		/>
+	</div>
+
+	<h3>AI & IoT</h3>
+
+
+	<h3>Physical Prototyping</h3>
+	<SkillIcon name="Arduino" level={70}
+	svg="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"
+	text="I have a strong grasp on JavaScript. It's my primary programming language and continues to be my choice of preferece to make projects with."
+	/>
+
+	<h3>Design</h3>
+
+	
+
+
+</section>
