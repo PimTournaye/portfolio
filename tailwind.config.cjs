@@ -16,7 +16,7 @@ module.exports = {
 			borderRadius: ['hover'],
 		},
 		borderRadius: {
-			"full": "100px"
+			"full": "200px"
 		}
 	}
 };
