@@ -7,13 +7,16 @@
 	import Sidebar from '$lib/header/Sidebar.svelte';
 	import '../app.css';
 
-	let dark = true;
+	let dark = false;
 </script>
 
-<div class:dark class="flex flex-row">
-	<Sidebar bind:dark />
-	<main class="flex justify-center mt-8 md: ml-10 h-full w-full 
-    overflow-hidden">
+<div class="flex flex-col ">
+	<Sidebar />
+	<main class=" flex flex-col
+    h-full w-auto 
+    overflow-hidden;
+	ml-48
+    ">
 		<slot />
 	</main>
 </div>
