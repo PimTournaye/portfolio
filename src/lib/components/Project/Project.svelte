@@ -2,7 +2,7 @@
     import { GQL_Project } from '$houdini';
 
     const { name, description } = $GQL_Project.data?.project || {};
-	const tags = $GQL_Project.data?.project?.tags;
+	const tags: string[] | undefined | ArrayLike<any> | any = $GQL_Project.data?.project?.tags;
 	const image = $GQL_Project.data?.project?.image[0].url;
 	const demo = $GQL_Project.data?.project?.demo;
 	const source = $GQL_Project.data?.project?.sourceCode;
@@ -17,11 +17,11 @@
 	<figure class="px-10 pt-10">
 		<img src={image} alt="Picture of {name}" />
 	</figure>
-	<!-- {#each tags as tag}
+	{#each tags as tag}
 		<div class="badge badge-outline">
 			<span>{tag}</span>
 		</div>
-	{/each} -->
+	{/each}
 	<p>{description}</p>
 
 	{#if demo}
