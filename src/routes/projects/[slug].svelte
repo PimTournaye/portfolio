@@ -3,12 +3,12 @@
 	import { GQL_Project } from '$houdini';
 	import type { LoadEvent } from '@sveltejs/kit';
 	import Project from '$lib/components/Project/Project.svelte';
-	
+
 	export async function load(event: LoadEvent) {
-		const variables = {	slug: event.params.slug};
+		const variables = { slug: event.params.slug };
 		await GQL_Project.fetch({ event, variables });
-		return { props: { variables } }
-	};
+		return { props: { variables } };
+	}
 </script>
 
 <script lang="ts">
@@ -23,11 +23,10 @@
 	const source = $GQL_Project.data?.project?.sourceCode;
 
 	console.log(description);
-	
 </script>
 
 <svelte:head>
-    <title>{name}</title>
+	<title>{name}</title>
 </svelte:head>
 
 <section>
@@ -35,13 +34,17 @@
 	<figure class="px-10 pt-10">
 		<img src={image} alt="Picture of {name}" />
 	</figure>
-	{#each tags as tag}
-		<div class="badge badge-outline">
-			<span>{tag}</span>
-		</div>
-	{/each}
-	<p>{@html description.html}</p>
-
+	{#if tags}
+		{#each tags as tag}
+			<div class="badge badge-outline">
+				<span>{tag}</span>
+			</div>
+		{/each}
+	{/if}
+	<!-- This does work, the type checking is just really annoying here. -->
+	{#if description}
+		<p>{@html description.html}</p>
+	{/if}
 	{#if demo}
 		<div class="mt-5">
 			<a href={demo} class="btn btn-primary">
