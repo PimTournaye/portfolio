@@ -14,8 +14,11 @@
 		text-white bg-gray-900 text-sm font-bold
 		transition-all duration-100 scale-0 origin-left;
 	}
+	:root {
+	@apply bg-[#f7f7f7] dark:bg-black text-[#222222] dark:text-white;
+}
 }
 
 :root {
-	@apply bg-[#f7f7f7] dark:bg-black text-[#222222] dark:text-white;
+	font-family: 'Nunito Sans', sans-serif;
 }
