@@ -13,10 +13,11 @@
 <div class="flex flex-col ">
 	<Sidebar />
 	<main class=" flex flex-col
-    h-full w-auto 
+	jusitfy-center items-center
+    h-full w-auto
     overflow-hidden;
-	ml-48
-    ">
+	mt-12 ml-60 mr-60
+	">
 		<slot />
 	</main>
 </div>
