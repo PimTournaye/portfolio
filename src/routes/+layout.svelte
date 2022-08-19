@@ -1,6 +1,8 @@
 <script context="module" lang="ts">
-	import client from '../lib/graphql/client';
-	client.init();
+	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
+
+	// import client from '../lib/graphql/client';
+	// client.init();
 </script>
 
 <script>

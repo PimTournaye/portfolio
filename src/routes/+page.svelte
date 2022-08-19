@@ -1,8 +1,10 @@
 <script context="module">
-	import { browser } from '$app/env';
+	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
 
-	export const router = browser;
-	export const prerender = true;
+	// import { browser } from '$app/env';
+
+	// export const router = browser;
+	// export const prerender = true;
 </script>
 
 <script lang="ts"></script>

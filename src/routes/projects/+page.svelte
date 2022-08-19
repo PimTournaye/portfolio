@@ -1,12 +1,14 @@
 <script context="module" lang="ts">
-	import { GQL_Projects } from '$houdini';
-	import Projects from '$lib/components/Project/Projects.svelte';
-	import type { LoadEvent } from '@sveltejs/kit';
+	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
 
-	export async function load(event: LoadEvent) {
-		await GQL_Projects.fetch({ event });
-		return {};
-	}
+	// import { GQL_Projects } from '$houdini';
+	// import Projects from '$lib/components/Project/Projects.svelte';
+	// import type { LoadEvent } from '@sveltejs/kit';
+
+	// export async function load(event: LoadEvent) {
+	// 	await GQL_Projects.fetch({ event });
+	// 	return {};
+	// }
 </script>
 
 <svelte:head>
