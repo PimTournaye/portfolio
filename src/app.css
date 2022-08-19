@@ -5,20 +5,20 @@
 @tailwind utilities;
 
 @layer components {
-	.sidebar-item {
-		@apply relative flex justify-center items-center 
+  .sidebar-item {
+    @apply relative flex justify-center items-center 
 		h-24 w-24 mt-4 mb-4 mx-auto shadow-lg;
-	}
-	.sidebar-tooltip {
-		@apply absolute w-auto p-2 m-2 min-w-max left-32 shadow-lg
+  }
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-32 shadow-lg
 		text-white bg-gray-900 text-sm font-bold
 		transition-all duration-100 scale-0 origin-left;
-	}
-	:root {
-	@apply bg-[#f7f7f7] dark:bg-black text-[#222222] dark:text-white;
-}
+  }
+  :root {
+    @apply bg-[#f7f7f7] dark:bg-black text-[#222222] dark:text-white;
+  }
 }
 
 :root {
-	font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }

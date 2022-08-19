@@ -1,4 +1,3 @@
-
 import { browser, dev } from '$app/env';
 import SkillIcon from '$lib/components/SkillIcon.svelte';
 
