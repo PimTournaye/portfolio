@@ -1,10 +1,3 @@
-<script context="module" lang="ts">
-	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-
-	// import client from '../lib/graphql/client';
-	// client.init();
-</script>
-
 <script>
 	import Sidebar from '$lib/header/Sidebar.svelte';
 	import '../app.css';

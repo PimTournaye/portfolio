@@ -1,14 +1,3 @@
-<script context="module">
-	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-
-	// import { browser } from '$app/env';
-
-	// export const router = browser;
-	// export const prerender = true;
-</script>
-
-<script lang="ts"></script>
-
 <svelte:head>
 	<title>Home</title>
 </svelte:head>

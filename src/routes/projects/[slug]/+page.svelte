@@ -1,10 +1,9 @@
 <script lang="ts" context="module">
 	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
 
-	// import { browser } from '$app/env';
-	// import { GQL_Project } from '$houdini';
+	import { browser } from '$app/env';
+	import { GQL_Project } from '$houdini';
 	// import type { LoadEvent } from '@sveltejs/kit';
-	// import Project from '$lib/components/Project/Project.svelte';
 
 	// export async function load(event: LoadEvent) {
 	// 	const variables = { slug: event.params.slug };
@@ -16,11 +15,10 @@
 <script lang="ts">
 	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
 	// Suggestion (check code before using, and possibly convert to data.X access later):
-	// import type { PageData } from './$types';
-	// export let data: PageData;
-	// $: ({ variables } = data);
-
-	export let variables: any;
+	 import type { PageData } from './$types';
+	 export let data: PageData;
+	 
+	$: ({ variables } = data);
 
 	$: browser && GQL_Project.fetch({ variables });
 
