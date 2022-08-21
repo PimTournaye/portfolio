@@ -1,0 +1,12 @@
+query Projects {
+  projects {
+    slug
+    name
+    short
+    tags
+    year
+    image {
+      url(transformation: { image: { resize: { fit: clip, width: 500, height: 400 } } })
+    }
+  }
+}
