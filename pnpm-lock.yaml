@@ -32,7 +32,6 @@ specifiers:
 
 dependencies:
   '@kitql/all-in': 0.7.7_y4mhkpkcreaado5hpraicrka6e
-  '@types/node': 18.7.8
   autoprefixer: 10.4.2_postcss@8.4.8
   p5-svelte: 3.1.2_@types+p5@1.4.2
 
@@ -41,6 +40,7 @@ devDependencies:
   '@playwright/test': 1.24.2
   '@sveltejs/adapter-auto': 1.0.0-next.65
   '@sveltejs/kit': 1.0.0-next.428_svelte@3.46.4+vite@3.0.3
+  '@types/node': 18.7.8
   '@types/p5': 1.4.2
   '@typescript-eslint/eslint-plugin': 5.33.0_njno5y7ry2l2lcmiu4tywxkwnq
   '@typescript-eslint/parser': 5.33.0_qugx7qdu5zevzvxaiqyxfiwquq

@@ -19,6 +19,7 @@
     "@playwright/test": "^1.22.2",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@types/node": "18.7.8",
     "@types/p5": "^1.4.2",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
