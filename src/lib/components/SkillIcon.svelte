@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let level: number = 0;
+  export let level: number;
   export let svg: string = '';
   export let text: string = '';
   export let name: string = '';
