@@ -1,32 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import watchAndRun from '@kitql/vite-plugin-watch-and-run';
-import path from 'path';
+import houdini from 'houdini/vite';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-  plugins: [
-    sveltekit(),
-    watchAndRun([
-      {
-        name: 'Houdini',
-        watch: path.resolve('src/**/*.(gql|graphql|svelte)'),
-        run: 'npm run gen',
-        delay: 100,
-        watchKind: ['ready', 'add', 'change', 'unlink']
-      },
-      {
-        name: 'Houdini',
-        watch: path.resolve('houdini.config.js'),
-        run: 'npm run gen',
-        delay: 100
-      }
-    ])
-  ],
-  server: {
-    fs: {
-      allow: ['.']
-    }
-  }
-};
+	plugins: [houdini(), sveltekit()],
+}
 
 export default config;

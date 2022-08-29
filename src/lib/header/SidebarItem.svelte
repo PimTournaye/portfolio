@@ -1,6 +1,6 @@
-<script lang="ts">
-  export let text: string;
-  export let route: string;
+<script>
+  export let text;
+  export let route;
 </script>
 
 <li>

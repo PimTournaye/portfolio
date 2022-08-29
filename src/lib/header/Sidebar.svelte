@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import SidebarToggle from '$lib/header/SidebarToggle.svelte';
   import SidebarItem from './SidebarItem.svelte';
 

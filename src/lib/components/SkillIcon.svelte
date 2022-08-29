@@ -1,8 +1,8 @@
-<script lang="ts">
-  export let level: number;
-  export let svg: string = '';
-  export let text: string = '';
-  export let name: string = '';
+<script>
+  export let level ;
+  export let svg = '';
+  export let text = '';
+  export let name = '';
 </script>
 
 <div class="flex group">

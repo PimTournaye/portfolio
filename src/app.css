@@ -15,7 +15,8 @@
 		transition-all duration-100 scale-0 origin-left;
   }
   :root {
-    @apply bg-[#f7f7f7] dark:bg-black text-[#222222] dark:text-white;
+    @apply bg-[#f7f7f7] dark:bg-[#010405]
+    text-[#222222] dark:text-white;
   }
 }
 

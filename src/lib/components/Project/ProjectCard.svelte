@@ -1,10 +1,10 @@
-<script lang="ts">
-  export let name: string | null;
-  export let slug: string | null;
-  export let short: string | null;
-  export let year: number | null;
-  export let images: string[] | ArrayLike<any>;
-  export let tags: string[] | null;
+<script>
+  export let name;
+  export let slug;
+  export let short;
+  export let year;
+  export let images;
+  export let tags;
 </script>
 
 <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">

@@ -3,7 +3,7 @@
  * @param {string} tag
  * @returns {string} color
  */
-export default function tagColor(tag: string): string {
+export default function tagColor(tag) {
   switch (tag) {
     case 'Creative Coding':
       return '#FFFFFF';

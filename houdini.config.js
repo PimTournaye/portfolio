@@ -1,9 +1,7 @@
 /** @type {import('houdini').ConfigFile} */
 const config = {
-  schemaPath: './schema.graphql',
-  sourceGlob: 'src/**/*.{svelte,gql,graphql}',
-  apiUrl: process.env.VITE_GRAPHQL_URL
-  //"apiUrl": import.meta.env.VITE_GRAPHQL_URL
-};
+    "client": "./src/client.js",
+    "apiUrl": "https://api-eu-central-1.hygraph.com/v2/ckxlpg27z4bcj01xpbrehcs3y/master"
+}
 
-export default config;
+export default config
