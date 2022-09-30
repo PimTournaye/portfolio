@@ -2,14 +2,13 @@
 	import ProjectCard from '$lib/components/Project/ProjectCard.svelte';
 	export let data;
 	$: ({ Projects } = data);
-
-		console.log($Projects);
-
 </script>
 
 <svelte:head>
 	<title>Projects</title>
 </svelte:head>
+
+{console.log($Projects.data.projects)}
 
 <section>
 	<h1 class="title text-4xl mb-10 font-bold">Projects</h1>
