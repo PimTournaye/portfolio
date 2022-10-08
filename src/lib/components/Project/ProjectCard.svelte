@@ -1,5 +1,5 @@
 <script>
-  export let name;
+  export let title;
   export let slug;
   export let short;
   export let year;
@@ -14,7 +14,7 @@
         <img
           class="h-48 w-full object-cover md:h-full md:w-48"
           src={image.url}
-          alt="Picture of {name}"
+          alt="Picture of {title}"
         />
       {/each}
     </div>
@@ -22,7 +22,7 @@
       <div class="uppercase tracking-wide text-sm font-semibold">{year}</div>
       <a
         href="/projects/{slug}"
-        class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{name}</a
+        class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{title}</a
       >
       <p class="mt-2 text-slate-500">{short}</p>
     </div>

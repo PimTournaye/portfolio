@@ -5,8 +5,7 @@
 
 <li>
   <a
-    sveltekit:prefetch
-    href={route}
+  href={route}
     class="sidebar-item rounded-full
     hover:rounded-xl transition-all duration-200 ease-linear
     group

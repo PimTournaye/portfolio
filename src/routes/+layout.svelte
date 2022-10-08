@@ -1,10 +1,6 @@
 <script >
 	import "../app.css";
 
-	// Houdini Client init
-	import client from '../client';
-	client.init();
-
 	import Sidebar from '$lib/header/Sidebar.svelte';
 </script>
 

@@ -1571,7 +1571,6 @@ type Project implements Node {
     skip: Int
     where: AssetWhereInput
   ): [Asset!]!
-  name: String!
 
   """The time the document was published. Null on documents in draft stage."""
   publishedAt: DateTime
@@ -1615,6 +1614,7 @@ type Project implements Node {
   """System stage field"""
   stage: Stage!
   tags: [String!]!
+  title: String!
 
   """The time the document was updated"""
   updatedAt: DateTime!
@@ -1660,11 +1660,11 @@ input ProjectCreateInput {
   demo: String
   description: RichTextAST
   image: AssetCreateManyInlineInput!
-  name: String!
   short: String!
   slug: String
   sourceCode: String
   tags: [String!]
+  title: String!
   updatedAt: DateTime
   year: Int
 }
@@ -1792,34 +1792,6 @@ input ProjectManyWhereInput {
   image_every: AssetWhereInput
   image_none: AssetWhereInput
   image_some: AssetWhereInput
-  name: String
-
-  """All values containing the given string."""
-  name_contains: String
-
-  """All values ending with the given string."""
-  name_ends_with: String
-
-  """All values that are contained in given list."""
-  name_in: [String]
-
-  """All values that are not equal to given value."""
-  name_not: String
-
-  """All values not containing the given string."""
-  name_not_contains: String
-
-  """All values not ending with the given string"""
-  name_not_ends_with: String
-
-  """All values that are not contained in given list."""
-  name_not_in: [String]
-
-  """All values not starting with the given string."""
-  name_not_starts_with: String
-
-  """All values starting with the given string."""
-  name_starts_with: String
   publishedAt: DateTime
 
   """All values greater than the given value."""
@@ -1953,6 +1925,34 @@ input ProjectManyWhereInput {
   Matches if the field array does not contains *all* items provided to the filter or order does not match
   """
   tags_not: [String!]
+  title: String
+
+  """All values containing the given string."""
+  title_contains: String
+
+  """All values ending with the given string."""
+  title_ends_with: String
+
+  """All values that are contained in given list."""
+  title_in: [String]
+
+  """All values that are not equal to given value."""
+  title_not: String
+
+  """All values not containing the given string."""
+  title_not_contains: String
+
+  """All values not ending with the given string"""
+  title_not_ends_with: String
+
+  """All values that are not contained in given list."""
+  title_not_in: [String]
+
+  """All values not starting with the given string."""
+  title_not_starts_with: String
+
+  """All values starting with the given string."""
+  title_starts_with: String
   updatedAt: DateTime
 
   """All values greater than the given value."""
@@ -2007,8 +2007,6 @@ enum ProjectOrderByInput {
   demo_DESC
   id_ASC
   id_DESC
-  name_ASC
-  name_DESC
   publishedAt_ASC
   publishedAt_DESC
   short_ASC
@@ -2019,6 +2017,8 @@ enum ProjectOrderByInput {
   sourceCode_DESC
   tags_ASC
   tags_DESC
+  title_ASC
+  title_DESC
   updatedAt_ASC
   updatedAt_DESC
   year_ASC
@@ -2029,11 +2029,11 @@ input ProjectUpdateInput {
   demo: String
   description: RichTextAST
   image: AssetUpdateManyInlineInput
-  name: String
   short: String
   slug: String
   sourceCode: String
   tags: [String!]
+  title: String
   year: Int
 }
 
@@ -2231,34 +2231,6 @@ input ProjectWhereInput {
   image_every: AssetWhereInput
   image_none: AssetWhereInput
   image_some: AssetWhereInput
-  name: String
-
-  """All values containing the given string."""
-  name_contains: String
-
-  """All values ending with the given string."""
-  name_ends_with: String
-
-  """All values that are contained in given list."""
-  name_in: [String]
-
-  """All values that are not equal to given value."""
-  name_not: String
-
-  """All values not containing the given string."""
-  name_not_contains: String
-
-  """All values not ending with the given string"""
-  name_not_ends_with: String
-
-  """All values that are not contained in given list."""
-  name_not_in: [String]
-
-  """All values not starting with the given string."""
-  name_not_starts_with: String
-
-  """All values starting with the given string."""
-  name_starts_with: String
   publishedAt: DateTime
 
   """All values greater than the given value."""
@@ -2392,6 +2364,34 @@ input ProjectWhereInput {
   Matches if the field array does not contains *all* items provided to the filter or order does not match
   """
   tags_not: [String!]
+  title: String
+
+  """All values containing the given string."""
+  title_contains: String
+
+  """All values ending with the given string."""
+  title_ends_with: String
+
+  """All values that are contained in given list."""
+  title_in: [String]
+
+  """All values that are not equal to given value."""
+  title_not: String
+
+  """All values not containing the given string."""
+  title_not_contains: String
+
+  """All values not ending with the given string"""
+  title_not_ends_with: String
+
+  """All values that are not contained in given list."""
+  title_not_in: [String]
+
+  """All values not starting with the given string."""
+  title_not_starts_with: String
+
+  """All values starting with the given string."""
+  title_starts_with: String
   updatedAt: DateTime
 
   """All values greater than the given value."""
@@ -2464,8 +2464,8 @@ input ProjectWhereStageInput {
 """References Project record uniquely"""
 input ProjectWhereUniqueInput {
   id: ID
-  name: String
   slug: String
+  title: String
 }
 
 input PublishLocaleInput {
