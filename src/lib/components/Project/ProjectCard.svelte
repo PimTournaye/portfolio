@@ -1,39 +1,34 @@
 <script>
-  export let title;
-  export let slug;
-  export let short;
-  export let year;
-  export let images;
-  export let tags;
+	export let title;
+	export let slug;
+	export let short;
+	export let year;
+	export let images;
+	export let tags;
 </script>
 
-<div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-  <div class="md:flex">
-    <div class="md:shrink-0">
-      {#each images as image}
-        <img
-          class="h-48 w-full object-cover md:h-full md:w-48"
-          src={image.url}
-          alt="Picture of {title}"
-        />
-      {/each}
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-sm font-semibold">{year}</div>
-      <a
-        href="/projects/{slug}"
-        class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{title}</a
-      >
-      <p class="mt-2 text-slate-500">{short}</p>
-    </div>
-    {#if tags}
-      <div class="mt-5 mb-5 space-x-2 flex-col justify-start">
-        {#each tags as tag}
-          <div class="badge badge-outline flex flex-wrap">
-            <span class="block w-auto">{tag}</span>
-          </div>
-        {/each}
-      </div>
-    {/if}
-  </div>
-</div>
+<a href="/projects/{slug}" class="flex flex-col items-center
+ bg-white rounded-lg border shadow-md mb-8
+ md:flex-row md:max-w-xl 
+ hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+	<div class="flex flex-col justify-between p-4 leading-normal">
+		<img
+		class="w-full object-cover object-center transition-all ease-in duration-200 max-h-60 hover:scale-105 bg-gray-50 md:h-36 lg:h-60"
+		src={images[0].url}
+		alt="Picture of {title}"
+		/>
+		<h5 class="mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+		<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{short}</p>
+		{#if tags}
+		<div class="mt-4 space-x-2">
+			{#each tags as tag}
+			<div class="pill bg-gray-400 rounded-full text-xs px-4 py-1 mb-2 inline-block">
+				{tag}
+			</div>
+			{/each}
+			<p class="flex flex-col mb-3 font-normal text-gray-700 dark:text-gray-400 float-right">{year}</p>
+		</div>
+		{/if}
+	</div>
+</a>
+<!-- class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" -->

@@ -22,7 +22,8 @@ export async function GET({ url }) {
 				tags
 				year
 				image {
-					url(transformation: { image: { resize: { fit: clip, width: 500, height: 400 } } })
+          url
+					# url(transformation: { image: { resize: { fit: clip, width: 500, height: 400 } } })
 				}
 			}
 		}
