@@ -19,5 +19,5 @@ module.exports = {
       full: '200px'
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
