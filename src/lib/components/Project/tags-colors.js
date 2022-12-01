@@ -6,19 +6,40 @@
 export default function tagColor(tag) {
   switch (tag) {
     case 'Creative Coding':
-      return '#FFFFFF';
+      return {
+        tag: '#e63946',
+        text: '#ffffff'
+      }
     case 'Maker':
-      return '#FFFFFF';
+      return {
+        tag: '#a8dadc',
+        text: '#000000'
+      }
     case 'Music':
-      return '#FFFFFF';
+      return {
+        tag: '#f1faee',
+        text: '#ffffff'
+      }
     case 'Machine Learning & AI':
-      return '#FFFFFF';
+      return {
+        tag: '#a8dadc',
+        text: '#FFFFFF'
+      }
     case 'Generative':
-      return '#FFFFFF';
+      return {
+        tag: '#457b9d',
+        text: '#FFFFFF'
+      }
     case 'Web Dev':
-      return '#FFFFFF';
+      return {
+        tag: '#1d3557',
+        text: '#FFFFFF'
+      }
     case 'Physical Computing':
-      return '#FFFFFF';
+      return {
+        tag: '#2a9d8f',
+        text: '#000000'
+      }
     case 'Experience':
       return '#FFFFFF';
     case 'UX/UI':

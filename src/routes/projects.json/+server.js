@@ -25,6 +25,10 @@ export async function GET({ url }) {
           url
 					# url(transformation: { image: { resize: { fit: clip, width: 500, height: 400 } } })
 				}
+        button {
+          buttonName
+          url
+        }
 			}
 		}
   `

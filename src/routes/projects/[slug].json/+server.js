@@ -19,8 +19,10 @@ export async function GET({ params }) {
                 description {
                   html
                 }
-                demo
-                sourceCode
+                button {
+                  buttonName
+                  url
+                }
                 year
                 image {
                     url

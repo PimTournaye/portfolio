@@ -9,6 +9,7 @@
     class="sidebar-item rounded-full
     hover:rounded-xl transition-all duration-200 ease-linear
     group
+    nav-item
     {$$props.class}
     "
   >

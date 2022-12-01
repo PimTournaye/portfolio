@@ -36,6 +36,7 @@
       text="PROJECTS"
       route="/projects"
       class="dark:bg-bau-blue bg-bright-bau-blue"
+      data-sveltekit-prefetch
     />
   </ul>
 

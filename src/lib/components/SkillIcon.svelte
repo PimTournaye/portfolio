@@ -16,10 +16,10 @@
 }
 </script>
 
-<div class="flex flex-col w-1/4 flex-grow mx-4 mb-8 justify-center max-w-lg
- bg-slate-100 px-8 py-8">
+<div class="flex flex-col w-1/3 flex-grow mb-8 justify-center max-w-lg
+  px-8 py-8">
 	<div
-		class="radial-progress bg-gray-300 {color()} shadow-lg
+		class="radial-progress bg-timberwolf {color()} shadow-lg
           mx-auto mb-6"
 		style="--value:{level}; --thickness: 4px"
 	>
