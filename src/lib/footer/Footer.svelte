@@ -23,9 +23,10 @@
 	];
 </script>
 
-<div class="fixed bottom-0 left-0 z-20 w-1/4
-bg-slate-300">
-	<div class="my-4 flex flex-row justify-center gap-4 pl-36">
+<div class="fixed bottom-2 z-20 w-1/6 px-auto
+place-self-center
+bg-slate-300 rounded-full">
+	<div class="my-4 flex flex-row gap-4 justify-center">
 		{#each icons as icon}
 			<a href={icon.url} class="fill-gray-500 hover:fill-gray-100 dark:hover:fill-white h-6 w-6">
         {@html icon.icon}
