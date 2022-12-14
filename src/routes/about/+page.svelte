@@ -40,7 +40,7 @@
           <div class="radial-progress bg-timberwolf text-bright-bau-red shadow-lg
           mx-auto mb-6" style="--value:100; --thickness: 4px">Yeah!</div>
           <p class="mb-1 text-lg font-bold">Expert</p>
-          <p>I feel confident in this field. I've used this numerous times and consider it in deep in my comfort zone</p>
+          <p>I feel confident in this field. I've used this numerous times and consider it to be very much in my comfort zone</p>
         </li>
         <li class="flex flex-col w-1/3 flex-grow mb-8 justify-center max-w-lg p-4">
           <div class="radial-progress bg-timberwolf text-bright-bau-yellow shadow-lg

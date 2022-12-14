@@ -40,7 +40,7 @@
     />
   </ul>
 
-  <button
+  <button on:click={() => (alert('Dark mode coming sometime soon!'), (dark = !dark))}
     class="sidebar-item rounded-full flex items-center justify-center mb-8
 			 text-white bg-black dark:bg-white dark:text-black 
 			hover:rounded-xl transition-all duration-200 ease-linear"

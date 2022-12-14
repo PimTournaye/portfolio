@@ -23,14 +23,14 @@
 	];
 </script>
 
-<div class="fixed bottom-2 z-20 w-1/6 px-auto
-place-self-center
+<footer class="fixed bottom-2 z-20 px-auto
+place-self-center ml-36 
 bg-slate-300 rounded-full">
-	<div class="my-4 flex flex-row gap-4 justify-center">
+	<div class="my-4 flex flex-row gap-4 mx-8 justify-center">
 		{#each icons as icon}
 			<a href={icon.url} class="fill-gray-500 hover:fill-gray-100 dark:hover:fill-white h-6 w-6">
         {@html icon.icon}
 			</a>
 		{/each}
 	</div>
-</div>
+</footer>
