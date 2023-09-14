@@ -6,12 +6,14 @@
 	 */
 	let lines = [];
 	let margin = 20;
-	let timerDuration = 10000;
+	let timerDuration = 500000;
 	let yRange = 50;
 	let backgroundColor = '#EADCCF';
 	let totalLines = 100;
-	let totalSegments = 20;
+	let totalSegments = 200;
+	let stopLoop = false;
 
+	// @ts-ignore
 	const sketch = (p5) => {
 		p5.setup = () => {
 			p5.createCanvas(window.innerHeight, window.innerWidth);
@@ -43,6 +45,7 @@
 		};
 
 		p5.draw = () => {
+			// Stop the loop if we have drawn all the segments
 			// Clear the background
 			p5.background(backgroundColor);
 			// Select the current segment based on the current time
@@ -62,7 +65,7 @@
 				// Set up a variable to remember the current segment to connect it to the next one
 				let lastSegment = { x: 0 + margin, y: line.baseY };
 				// Draw all the line segments
-				line.segments.forEach((segment) => {
+				line.segments.forEach((segment, i) => {
 					// Get the color of the line segment
 					p5.stroke(line.color);
 
@@ -75,6 +78,9 @@
 			});
 		};
 	};
+
+
+
 </script>
 
 <div>
@@ -82,9 +88,20 @@
   <h2>Creative Technologist, Improviser, Artist</h2>
 </div>
 
-<P5 {sketch} />
+<!-- <P5 {sketch} /> -->
 
 
 <style lang="postcss">
 
+div {
+	@apply flex flex-col items-end h-screen mr-2 mt-6;
+}
+
+h1 {
+	@apply text-6xl md:text-7xl lg:text-8xl font-bold text-black text-center font-sans;
+}
+
+h2 {
+	@apply text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center font-mono;
+}
 </style>

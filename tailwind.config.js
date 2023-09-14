@@ -8,6 +8,10 @@ export default {
 	darkMode: 'class',
 	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
 	theme: {
+    fontFamily: {
+      'sans': ['"IBM Plex Sans"', 'sans-serif'],
+      'mono': ['"IBM Plex Mono"', 'monospace'],
+    },
     extend: {
       colors: {
         'bau-red': '#BE1E2D',
