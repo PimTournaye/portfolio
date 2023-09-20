@@ -1,9 +1,8 @@
 <script>
+	// @ts-ignore
 	import P5 from 'p5-svelte';
 
-	/**
-	 * @type {{ baseY: any; color: string; segments: { x: any; y: any; }[]; }[]}
-	 */
+	// @ts-ignore
 	let lines = [];
 	let margin = 20;
 	let timerDuration = 500000;
@@ -11,8 +10,10 @@
 	let backgroundColor = '#EADCCF';
 	let totalLines = 100;
 	let totalSegments = 200;
+	// @ts-ignore
 	let stopLoop = false;
 
+	// @ts-ignore
 	// @ts-ignore
 	const sketch = (p5) => {
 		p5.setup = () => {
@@ -55,16 +56,19 @@
 			// Offset the Y value based on the mouse Y position
 			let y = p5.map(p5.mouseY, 0, p5.height, -yRange, yRange);
 			// Adjust the Y value of the current segment
+			// @ts-ignore
 			lines.forEach(line => {
 			  line.segments[currentSegment].y = line.baseY + y;
 			})
 
 
 			// Draw all the lines
+			// @ts-ignore
 			lines.forEach((line) => {
 				// Set up a variable to remember the current segment to connect it to the next one
 				let lastSegment = { x: 0 + margin, y: line.baseY };
 				// Draw all the line segments
+				// @ts-ignore
 				line.segments.forEach((segment, i) => {
 					// Get the color of the line segment
 					p5.stroke(line.color);

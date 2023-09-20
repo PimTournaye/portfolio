@@ -1,7 +1,19 @@
+<script>
+  import { page } from '$app/stores';
+</script>
+
 <div id="nav">
+	{#if $page.url.pathname !== '/work'}
 	<a href="/work" class="nav-item bg-bright-bau-red">WORK</a>
+{/if}
+
+{#if $page.url.pathname !== '/about'}  
 	<a href="/about" class="nav-item bg-bright-bau-blue">ABOUT</a>
+{/if}
+
+{#if $page.url.pathname !== '/explore'}
 	<a href="/explore" class="nav-item bg-bright-bau-yellow">EXPLORE</a>
+{/if}
 </div>
 
 <style lang="postcss">
