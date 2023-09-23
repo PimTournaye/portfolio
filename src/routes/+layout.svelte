@@ -1,13 +1,18 @@
 <script>
 	import Navigation from '$lib/Navigation.svelte';
-import '../app.postcss';
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import '../app.postcss';
 </script>
 
-<!-- App Shell -->
-<AppShell>
-	<svelte:fragment slot="sidebarLeft">
+<svelte:head>
+	<title>Pim Tournaye</title>
+</svelte:head>
+
+<div class="h-full flex flex-row">
+	<div class="h-full">
 		<Navigation />
-	</svelte:fragment>
-	<slot />
-</AppShell>
+	</div>
+
+	<main class="w-full">
+		<slot />
+	</main>
+</div>

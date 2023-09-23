@@ -38,7 +38,7 @@
 	}
 
 	#content {
-    @apply ml-16
+    @apply mx-16
 	}
 </style>
 

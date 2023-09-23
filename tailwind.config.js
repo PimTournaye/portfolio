@@ -21,6 +21,7 @@ export default {
         'bright-bau-blue': '#091c44',
         'bright-bau-yellow': '#f4b800',
         'timberwolf': '#DBD4D3',
+        'bright-background': '#EADCCF',
         nyu: {
           '300': '#330662',
           '400': '#702b9d',
@@ -29,11 +30,7 @@ export default {
           '700': '#eee6f3',
         },
       },
-      borderRadius: ['hover']
     },
-    borderRadius: {
-      full: '200px'
-    }
   },
 	plugins: [
 		typography,

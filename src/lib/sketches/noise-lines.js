@@ -1,10 +1,8 @@
-<script>
-	import { browser } from '$app/environment';
+import { get } from "svelte/store";
+import { canvas } from ""
 
-	let w,h;
 
-	// @ts-nocheck
-	import P5 from 'p5-svelte';
+// @ts-nocheck
 export const sketch = (p5) => {
   // Global variables
   const timer = 5000;
@@ -107,28 +105,24 @@ export const sketch = (p5) => {
 
 
   p5.setup = () => {
-		// Create the canvas
-		p5.createCanvas(w, h)
+    // Create the canvas
+    p5.createCanvas(w, h, get(canvas));
 
     // get the Y offset for baseY based on the number of lines and the height of the canvas with margin
     const yOff = (h - margin * 2) / numLines;
     // Generate the Lines
     for (let i = 0; i < numLines; i++) {
       const baseY = margin + i * yOff;
-			const line = new Line(baseY);
-			line.createSegments();
-      lines.push(line);
+      lines.push(new Line(baseY));
     }
 
+    // p5.createCanvas(w, h)
 
     // Start the timer
     startTime = p5.millis();
-		console.log(lines);
-		console.log(lines[0].segments[0]);
   }
 
   p5.draw = () => {
-		p5.background('#EADCCF')
     // Check if the timer has elapsed
     if (p5.millis() > startTime + timer) animationMode = true;
 
@@ -140,38 +134,3 @@ export const sketch = (p5) => {
     });
   }
 }
-	</script>
-
-
-
-<section class="h-full w-full">
-	<div class="">
-		<h1>PIM TOURNAYE</h1>
-		<h2>Creative Technologist, Improviser, Artist</h2>
-	</div>
-	
-	<div class="h-3/4 w-full" bind:clientWidth={w} bind:clientHeight={h}>
-		<P5 {sketch} />
-	</div>
-</section>
-
-
-
-
-<style lang="postcss">
-	div {
-		@apply flex flex-col items-end py-6 ;
-	}
-
-	section {
-		@apply flex flex-col items-center justify-between px-8;
-	}
-
-	h1 {
-		@apply text-6xl md:text-7xl lg:text-8xl font-bold text-black text-right font-sans;
-	}
-
-	h2 {
-		@apply text-2xl md:text-3xl lg:text-4xl font-bold text-black text-right font-mono;
-	}
-</style>
