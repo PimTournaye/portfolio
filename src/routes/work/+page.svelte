@@ -1,6 +1,8 @@
 <script>
 	export let data;
 
+  console.log(data);
+
 	/** @type {import('./$types').PageData} */
 
   const random = () => Math.random();
@@ -35,7 +37,7 @@
 
 <style lang="postcss">
 	section {
-		@apply grid grid-cols-3 gap-4;
+		@apply lg:grid lg:grid-cols-3 sm:block md:grid md:grid-cols-2 gap-4;
 		/* @apply h-full w-full; */
 	}
 </style>

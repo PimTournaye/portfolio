@@ -1,4 +1,3 @@
-import { json } from '@sveltejs/kit';
 import { gql } from 'graphql-request';
 import { hygraph } from '$lib/data/hygraph.js';
 

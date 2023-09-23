@@ -144,7 +144,7 @@
 	};
 </script>
 
-<section class="h-[100vh] w-full">
+<section class="h-[100vh] w-full overflow-y-hidden">
 	<div>
 		<h1>PIM TOURNAYE</h1>
 		<h2>Creative Technologist, Improviser, Artist</h2>
