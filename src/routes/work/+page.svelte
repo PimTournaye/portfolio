@@ -1,4 +1,6 @@
 <script>
+	export let data;
+
 	/** @type {import('./$types').PageData} */
 
   const random = () => Math.random();

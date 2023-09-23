@@ -1,5 +1,5 @@
 <script>
-  export let title, short, image, slug;
+  export let title, short, image, slug, year, tags;
 </script>
 
 <div class="card">

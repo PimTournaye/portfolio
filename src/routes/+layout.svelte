@@ -2,12 +2,11 @@
 	import Navigation from '$lib/Navigation.svelte';
 	import { onMount } from 'svelte';
 	import '../app.postcss';
+	import { writable } from 'svelte/store';
 
-	let headerWidth = 0;
-	// get the width of the header element
-	onMount(() => {
-		headerWidth = document.querySelector('header').clientWidth;
-	});
+	// get the width of the header element for drawing margins
+	let headerWidth = writable(0);
+
 </script>
 
 <svelte:head>

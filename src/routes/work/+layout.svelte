@@ -1,31 +1,38 @@
 <script>
 	import BackButton from '$lib/components/BackButton.svelte';
+	import { onMount } from 'svelte';
+	import { writable } from 'svelte/store';
 
 	/** @type {import('./$types').LayoutData} */
 	export let data;
+
+	let bannerWidth = writable(0);
+
 </script>
 
 <section>
-	<div id="container">
-		<div class="flex flex-col justify-between items-center mr-8">
+		<div id="banner" bind:clientWidth={bannerWidth}>
 			<h1 class="sideways-title">WORK</h1>
 			<BackButton />
 		</div>
 
-		<slot />
-	</div>
+		<div class="w-full" style="margin-left: {bannerWidth}px;">
+			<slot />
+		</div>
+		
 </section>
 
 <style lang="postcss">
 	section {
-		@apply h-screen;
 		@apply bg-bright-bau-red;
-	}
-
-	#container {
 		@apply flex flex-row;
 		@apply pt-8 pb-16 px-8;
-		@apply h-full fixed
+		@apply h-full
+	}
+
+	#banner {
+		@apply flex flex-col items-center h-screen justify-between; 
+		@apply pr-8 pb-32 fixed;
 	}
 
 	.sideways-title {
