@@ -1,10 +1,8 @@
 <script>
-	import { browser } from '$app/environment';
-
-	let w,h;
-
 	// @ts-nocheck
 	import P5 from 'p5-svelte';
+	let w,h;
+
 export const sketch = (p5) => {
   // Global variables
   const timer = 5000;
@@ -12,21 +10,31 @@ export const sketch = (p5) => {
 
   let lines = [];
   const numSegments = 200;
-  const numLines = 20;
+  const numLines = 50;
   const colors = ["008D59", "091C44", "6D388A", "E83C28", "F19001", "F4B800"];
 
   const margin = 100;
+	let offsetNoiseRange = 20;
 
   let animationMode = false;
 
   // Generate perlin noise with amplitude
   // the amplitude is based on the mouseY position
   // and the range of the amplitude decreases as the timer counts down
-  const generateNoise = (y) => {
-    let amplitude = p5.map(p5.mouseY, 0, h, 0, 100);
-    amplitude = p5.map(p5.millis(), startTime, startTime + timer, amplitude, 2);
-    return p5.map(p5.noise(y / 100, p5.frameCount / 100), 0, 1, -amplitude, amplitude);
-  }
+	// The noise is generated based on the y position of the line and the frameCount
+	// the offset that this is noise generated must be within a certain range
+  // Once animationMode is true, we stop generating nosie and just use the static noise value
+	const generateNoise = (y) => {
+		if (!animationMode) {
+			const noise = p5.noise(y / 100, p5.frameCount / 100);
+			const amplitude = p5.map(p5.mouseY, 0, p5.height, 0, 100);
+			return noise * amplitude;
+		} else {
+			const noise = p5.noise(y / 100, p5.frameCount / 100);
+			const offset = p5.map(p5.mouseX, 0, p5.width, 0, offsetNoiseRange);
+			return noise * offset;
+		}
+	}
 
   class Line {
     constructor(baseY) {
@@ -90,10 +98,7 @@ export const sketch = (p5) => {
       this.segments.forEach((segment) => {
         // set the current segment
         this.currentSegment = segment;
-        // get the noise value
-        const noise = generateNoise(segment.y);
-        // Draw a line from the last segment to the current segment
-        p5.line(this.lastSegment.x, this.lastSegment.y, segment.x, segment.y + noise);
+        p5.line(this.lastSegment.x, this.lastSegment.y, segment.x, segment.y);
         // Set the last segment to the current segment
         this.lastSegment = this.currentSegment;
       });

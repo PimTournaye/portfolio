@@ -1,18 +1,29 @@
 <script>
 	import Navigation from '$lib/Navigation.svelte';
+	import { onMount } from 'svelte';
 	import '../app.postcss';
+
+	let headerWidth = 0;
+	// get the width of the header element
+	onMount(() => {
+		headerWidth = document.querySelector('header').clientWidth;
+	});
 </script>
 
 <svelte:head>
 	<title>Pim Tournaye</title>
 </svelte:head>
 
-<div class="h-full flex flex-row">
-	<div class="h-full">
-		<Navigation />
-	</div>
 
-	<main class="w-full">
-		<slot />
-	</main>
-</div>
+<header class="h-full fixed" bind:clientWidth={headerWidth}>
+	<Navigation />
+</header>
+<main style="margin-left: {headerWidth}px">
+	<slot />
+</main>
+
+<style lang="postcss">
+	main {
+
+	}
+</style>
