@@ -1,12 +1,13 @@
 <script>
+  import ProjectCard from '$lib/components/ProjectCard.svelte';
+
+	/** @type {import('./$types').PageData} */
 	export let data;
 
   console.log(data);
 
-	/** @type {import('./$types').PageData} */
 
   const random = () => Math.random();
-
   const getSize = () => {
     // 40% change of getting the class col-span-2
     // if they got the class 15 % chance of getting col-row-2
@@ -27,11 +28,20 @@
 </script>
 
 <section class="w-full">
-  <h1 class="text-6xl">HELP</h1>
+  {#each data.projects as { slug, title, short, image, year, tags}}
+    <ProjectCard
+      title={title}
+      short={short}
+      image={image}
+      slug={slug}
+      year={year}
+      tags={tags}
+    />
+  {/each}
 	<!-- Generate 30 divs for testing -->
-		{#each Array.from({ length: 30 }) as _, i}
+		<!-- {#each Array.from({ length: 30 }) as _, i}
 			<div class="h-64 bg-gray-200 {getSize()}" />
-		{/each}
+		{/each} -->
 	
 </section>
 
