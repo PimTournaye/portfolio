@@ -26,8 +26,10 @@
 		// Once animationMode is true, we stop generating nosie and just use the static noise value
 		const generateNoise = (y) => {
 			if (!animationMode) {
+				// Clamp mouseY influence to 0 -10
+				const mouse = p5.constrain(p5.mouseY, 0, 1);
 				const noise = p5.noise(y / 100, p5.frameCount / 100);
-				const amplitude = p5.map(p5.mouseY, 0, p5.height, 0, 100);
+				const amplitude = p5.map(p5.mouseY *0.07, 0, p5.height, 0, 100);
 				return noise * amplitude;
 			} else {
 				const noise = p5.noise(y / 100, p5.frameCount / 100);
@@ -144,8 +146,8 @@
 	};
 </script>
 
-<section class="h-[100vh] w-full overflow-y-hidden">
-	<div>
+<section class="h-screen w-full overflow-y-hidden">
+	<div id="name">
 		<h1>PIM TOURNAYE</h1>
 		<h2>Creative Technologist, Improviser, Artist</h2>
 	</div>
@@ -156,12 +158,17 @@
 </section>
 
 <style lang="postcss">
+	#name {
+		@apply py-8;
+		@apply flex flex-col text-right;
+	}
+
 	div {
-		@apply flex flex-col items-end py-6;
+		@apply flex flex-col items-end;
 	}
 
 	section {
-		@apply flex flex-col items-center justify-between px-8;
+		@apply flex flex-col justify-between px-8;
 		@apply bg-bright-background;
 	}
 

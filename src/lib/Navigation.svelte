@@ -20,14 +20,14 @@
 	#nav {
 		@apply flex flex-row;
 		@apply h-full;
-		@apply sticky
+		@apply sticky;
 	}
 
 	.nav-item {
-		@apply text-xl md:text-2xl lg:text-3xl font-bold text-white text-center;
+		@apply text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-white text-center;
     @apply py-8;
-    @apply w-16 md:w-24 lg:w-32;
-    @apply transition-all ease-in-out duration-500;
+    @apply w-16 md:w-24 lg:w-32 xl:w-40;
+    @apply transition-all ease-in-out duration-300;
 		writing-mode: vertical-rl;
 		text-orientation: mixed;
 

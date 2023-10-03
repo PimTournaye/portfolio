@@ -58,17 +58,17 @@
 <style lang="postcss">
   /* Top part of the page */
   .about-title {
-    @apply text-2xl md:text-4xl lg:text-6xl font-medium font-mono;
+    @apply text-xl md:text-2xl lg:text-4xl font-medium font-mono;
     @apply text-white text-right;
   }
 
   .about-desc {
-    @apply text-base md:text-lg lg:text-xl font-light font-mono;
+    @apply text-sm md:text-base lg:text-lg font-light font-mono;
     @apply text-white text-right;
   }
 
   .about-img {
-    @apply lg:w-96 lg:h-96;
+    @apply lg:max-w-md;
     @apply rounded-lg rounded-bl-[120px];
   }
   /* Skills and interests section */
@@ -78,7 +78,7 @@
   }
 
   .skill-section {
-    @apply flex flex-row flex-wrap;
+    @apply flex flex-row overflow-x-auto;
     @apply space-x-4 space-y-4;
   }
 </style>

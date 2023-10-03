@@ -1,6 +1,5 @@
 <script>
 	import BackButton from '$lib/components/BackButton.svelte';
-	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 
 	/** @type {import('./$types').LayoutData} */
