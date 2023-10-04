@@ -31,10 +31,12 @@
   },
   "type": "module",
   "dependencies": {
+    "graphology": "^0.25.4",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "lucide-svelte": "^0.279.0",
     "p5": "^1.7.0",
-    "p5-svelte": "^3.1.2"
+    "p5-svelte": "^3.1.2",
+    "sigma": "3.0.0-alpha3"
   }
 }

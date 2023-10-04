@@ -13,8 +13,6 @@
     </div>
     
     <div id="content">
-      <h2>UNDER CONSTRUCTION.</h2>
-      <p>Please visit some other time soon.</p>
 			<slot />
     </div>
   </div>

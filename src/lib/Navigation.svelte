@@ -3,15 +3,15 @@
 </script>
 
 <div id="nav">
-	{#if $page.url.pathname !== '/work'}
+	{#if !$page.url.pathname.startsWith('/work')}
 	<a href="/work" class="nav-item bg-bright-bau-red hover:bg-white hover:text-bright-bau-red">WORK</a>
 {/if}
 
-{#if $page.url.pathname !== '/about'}  
+{#if !$page.url.pathname.startsWith('/about')}  
 	<a href="/about" class="nav-item bg-bright-bau-blue hover:bg-white hover:text-bright-bau-blue">ABOUT</a>
 {/if}
 
-{#if $page.url.pathname !== '/explore'}
+{#if !$page.url.pathname.startsWith('/explore')}
 	<a href="/explore" class="nav-item bg-bright-bau-yellow hover:bg-white hover:text-bright-bau-yellow">EXPLORE</a>
 {/if}
 </div>
