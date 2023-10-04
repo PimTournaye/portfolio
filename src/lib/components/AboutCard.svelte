@@ -32,7 +32,7 @@
   }
 
   div {
-    @apply flex flex-col justify-between p-4 leading-normal;
+    @apply flex flex-col justify-between py-4 pr-4 leading-normal;
   }
 
   h5 {
@@ -46,6 +46,6 @@
   }
 
   p {
-    @apply mb-2 text-base sm:text-sm text-gray-700 font-mono font-medium;
+    @apply pb-2 text-base sm:text-sm text-gray-700 font-mono font-medium;
   }
 </style>

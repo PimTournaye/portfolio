@@ -12,7 +12,7 @@
 		</p>
 	</div>
 	<div class="my-auto" id="explore-grid">
-		<a href="/explore/music-library" class="card" id="music-viz">
+		<a href="https://music-library-viz.vercel.app/" class="card" id="music-viz">
 			<div class="h-full w-full flex flex-col-reverse p-8">
 				<span class="text-5xl text-white text-right font-mono">MY MUSIC LIBRARY</span>
 			</div>

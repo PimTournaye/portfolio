@@ -38,7 +38,7 @@
         {@html description}
       </article>
       
-      <div class="px-4 flex flex-row justify-between">
+      <div class="tags-btns">
         <div class="flex flex-row space-x-4">
           {#each tags as tag}
 					<span>{tag}</span>
@@ -49,7 +49,7 @@
           {#if buttons}
           {#each buttons as button}
           <a href={button.url} target="_blank" rel="noopener noreferrer">
-            <button class="px-6 py-4 text-white bg-bright-bau-blue rounded-lg">
+            <button class="btn">
               {button.buttonName}
             </button>
           </a>
@@ -73,14 +73,11 @@
   }
 
 	img {
-    @apply max-h-full;
+    @apply max-h-[80%];
     //max-width: var(--sectionWidth);
     width: 100%;
     @apply shadow-lg rounded-tl-lg rounded-bl-lg;
-	}
-
-	div {
-		@apply pt-4;
+    @apply mb-4
 	}
 
 	h1 {
@@ -107,6 +104,21 @@
 	span {
 		@apply text-base text-white;
 		@apply px-6 py-4 rounded-lg;
-		@apply bg-gray-800;
+		@apply bg-bright-bau-blue;
 	}
+
+  .tags-btns {
+    @apply flex flex-row justify-between;
+    @apply bg-bright-background bg-opacity-40;
+    @apply p-2 mt-8 rounded-lg;
+  }
+
+  .btn {
+    @apply px-6 py-4; 
+    @apply text-white font-bold;
+    @apply hover:bg-timberwolf hover:bg-opacity-100 hover:text-bright-bau-red;
+    @apply transition ease-in-out duration-300; 
+    @apply bg-bright-bau-yellow rounded-lg;
+    
+  }
 </style>
