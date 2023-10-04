@@ -1,23 +1,28 @@
-<script >
-	import "../app.css";
+<script>
+	import Navigation from '$lib/Navigation.svelte';
+	import { onMount } from 'svelte';
+	import '../app.postcss';
+	import { writable } from 'svelte/store';
 
-	import Sidebar from '$lib/header/Sidebar.svelte';
-	import Footer from "../lib/footer/Footer.svelte";
+	// get the width of the header element for drawing margins
+	let headerWidth = writable(0);
+
 </script>
 
-<div class="flex flex-col ">
-  <Sidebar />
-  <main
-    class=" flex flex-col
-	jusitfy-center items-center
-    h-full w-auto
-    overflow-hidden;
-	mt-12 ml-60 mr-60
-  pl-36
-	"
-  >
-    <slot />
-  </main>
+<svelte:head>
+	<title>Pim Tournaye</title>
+</svelte:head>
 
-  <Footer />
-</div>
+
+<header class="h-full fixed" bind:clientWidth={headerWidth}>
+	<Navigation />
+</header>
+<main style="margin-left: {headerWidth}px">
+	<slot />
+</main>
+
+<style lang="postcss">
+	main {
+
+	}
+</style>
