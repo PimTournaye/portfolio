@@ -55,7 +55,7 @@
 
 	#music-viz {
 		/* background pic */
-		background-image: url('music-viz.png');
+		background-image: url('/music-viz.png');
 		background-color: black;
 		@apply object-center object-cover;
 	}
